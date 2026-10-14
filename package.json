@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "dev": "node server.js" },
+  "scripts": {
+    "dev": "node server.js",
+    "test": "node test/api.test.js"
+  },
   "engines": { "node": ">=20" }
 }
