@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="A private first step toward finding mental health support in India.">
+  <title>Saathi — a first step toward support</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="Saathi home"><span class="brand-mark">s</span> saathi</a><span class="privacy"><span class="dot"></span> Private by design</span></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">A gentle place to begin</p>
+      <h1>You don’t have to<br><em>figure it out alone.</em></h1>
+      <p class="intro">A small check-in can help you find a next step that feels right. No diagnosis, no pressure, and no account needed.</p>
+      <div class="notice"><span aria-hidden="true">✳</span><p><strong>If you or someone else is in immediate danger</strong>, call <a href="tel:112">112</a> now. For mental health support, call Tele-MANAS at <a href="tel:14416">14416</a> (free, 24/7).</p></div>
+    </section>
+
+    <section class="checkin card" aria-labelledby="checkin-title">
+      <div class="section-heading"><div><p class="eyebrow">Your check-in</p><h2 id="checkin-title">What feels closest today?</h2></div><span class="step">01 <span>/ 02</span></span></div>
+      <p class="hint">Choose any that fit. You can skip anything.</p>
+      <fieldset id="mood-options" class="choices">
+        <legend class="sr-only">Select how you are feeling</legend>
+        <label class="choice"><input type="checkbox" value="stress"><span class="choice-icon">〰</span><span><strong>Stressed or overwhelmed</strong><small>Too much to carry right now</small></span><span class="check"></span></label>
+        <label class="choice"><input type="checkbox" value="anxiety"><span class="choice-icon">◌</span><span><strong>Worried or on edge</strong><small>Thoughts feel hard to quiet</small></span><span class="check"></span></label>
+        <label class="choice"><input type="checkbox" value="low"><span class="choice-icon">☁</span><span><strong>Low or disconnected</strong><small>It’s been difficult to feel like myself</small></span><span class="check"></span></label>
+        <label class="choice"><input type="checkbox" value="sleep"><span class="choice-icon">☾</span><span><strong>Finding it hard to sleep</strong><small>Rest has been out of reach</small></span><span class="check"></span></label>
+        <label class="choice"><input type="checkbox" value="talk"><span class="choice-icon">♡</span><span><strong>I’d like to talk to someone</strong><small>A person who can listen and help</small></span><span class="check"></span></label>
+      </fieldset>
+      <label class="consent"><input id="ai-consent" type="checkbox"><span>Use Gemini AI to turn my selected topics into a short supportive reflection. My selections will be sent to Google’s Gemini API for this response, and Saathi does not save them. <a href="#privacy-note">How this works</a></span></label>
+      <button id="get-support" class="primary" type="button">Find a next step <span aria-hidden="true">→</span></button>
+      <p id="error-message" class="error" role="alert" hidden></p>
+    </section>
+
+    <section id="results" class="results card" aria-live="polite" hidden>
+      <p class="eyebrow">A next step for you</p>
+      <h2 id="result-title">You deserve support at your pace.</h2>
+      <p id="reflection" class="reflection"></p>
+      <div class="recommendation"><span class="rec-icon">✳</span><div><strong id="rec-title"></strong><p id="rec-copy"></p><a id="rec-link" href="#">Explore support <span aria-hidden="true">→</span></a></div></div>
+      <button id="restart" class="text-button" type="button">Start again</button>
+    </section>
+
+    <section class="resources" aria-labelledby="resources-title">
+      <div class="section-heading"><div><p class="eyebrow">Support in India</p><h2 id="resources-title">People are here to help.</h2></div></div>
+      <div class="resource-grid">
+        <article class="resource"><span class="resource-number">01</span><h3>Tele-MANAS</h3><p>Free, 24/7 mental health support. Ask for help in the language you’re comfortable speaking.</p><a class="resource-link" href="tel:14416">Call 14416 <span>↗</span></a></article>
+        <article class="resource"><span class="resource-number">02</span><h3>Emergency help</h3><p>For immediate danger or urgent emergency services anywhere in India.</p><a class="resource-link" href="tel:112">Call 112 <span>↗</span></a></article>
+        <article class="resource"><span class="resource-number">03</span><h3>Talk to someone you trust</h3><p>You could send a simple message: “I’m having a hard time. Can you stay with me or talk?”</p><a class="resource-link" href="#checkin-title">Find your words <span>↓</span></a></article>
+      </div>
+    </section>
+    <section id="privacy-note" class="footnote"><p><strong>A note on privacy and care</strong> Saathi is a student prototype, not medical care. It cannot assess risk or replace a qualified professional. The check-in is not saved. If you choose the AI reflection, only the selected topic labels are sent to Google Gemini; don’t include names, contact details, or other identifying information. Google processes the request under its applicable Gemini API terms. The AI may get things wrong—use the support links above if you need a person.</p><p>Sources: <a href="https://dghs.mohfw.gov.in/national-mental-health-programme.php" target="_blank" rel="noreferrer">Tele-MANAS, DGHS</a> · <a href="https://112.gov.in/" target="_blank" rel="noreferrer">India ERSS 112</a></p></section>
+  </main>
+  <footer><span>saathi <span class="footer-mark">✳</span></span><span>A first step, at your pace.</span></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
